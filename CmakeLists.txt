@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.5)
+project (func)
+ 
+# 设置源文件变量
+set(SOURCES
+    src/func.cpp
+    src/main.cpp
+)
+ 
+# 根据源文件目录构建可执行程序
+add_executable(func ${SOURCES})
+ 
+# 设置包含目录
+target_include_directories(func   #目标
+    PRIVATE 
+        ${PROJECT_SOURCE_DIR}/include      #包含目录
+)
+
